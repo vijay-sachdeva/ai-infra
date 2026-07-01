@@ -1,0 +1,81 @@
+{
+  "name": "European industrial electricity prices",
+  "source": "Eurostat nrg_pc_205 (non-household, band 500-1999 MWh/yr, all taxes, EUR/kWh)",
+  "source_url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/",
+  "unit": "EUR/kWh",
+  "period": "2025-S2",
+  "rows": [
+    {
+      "country": "IE",
+      "name": "Ireland",
+      "price_eur_kwh": 0.2771,
+      "period": "2025-S2"
+    },
+    {
+      "country": "DE",
+      "name": "Germany",
+      "price_eur_kwh": 0.2722,
+      "period": "2025-S2"
+    },
+    {
+      "country": "DK",
+      "name": "Denmark",
+      "price_eur_kwh": 0.2712,
+      "period": "2025-S2"
+    },
+    {
+      "country": "IT",
+      "name": "Italy",
+      "price_eur_kwh": 0.2544,
+      "period": "2025-S2"
+    },
+    {
+      "country": "NL",
+      "name": "Netherlands",
+      "price_eur_kwh": 0.2409,
+      "period": "2025-S2"
+    },
+    {
+      "country": "BE",
+      "name": "Belgium",
+      "price_eur_kwh": 0.2258,
+      "period": "2025-S2"
+    },
+    {
+      "country": "FR",
+      "name": "France",
+      "price_eur_kwh": 0.1815,
+      "period": "2025-S2"
+    },
+    {
+      "country": "PT",
+      "name": "Portugal",
+      "price_eur_kwh": 0.1622,
+      "period": "2025-S2"
+    },
+    {
+      "country": "ES",
+      "name": "Spain",
+      "price_eur_kwh": 0.1589,
+      "period": "2025-S2"
+    },
+    {
+      "country": "SE",
+      "name": "Sweden",
+      "price_eur_kwh": 0.1213,
+      "period": "2025-S2"
+    },
+    {
+      "country": "NO",
+      "name": "Norway",
+      "price_eur_kwh": 0.1033,
+      "period": "2025-S2"
+    },
+    {
+      "country": "FI",
+      "name": "Finland",
+      "price_eur_kwh": 0.0938,
+      "period": "2025-S2"
+    }
+  ]
+}

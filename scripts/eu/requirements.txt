@@ -1,0 +1,4 @@
+# Europe data pipeline dependencies.
+# The fetchers (fetch_entsoe.py, fetch_eurostat.py) are stdlib-only.
+# Only the daily news refresh needs the Anthropic SDK:
+anthropic>=0.39.0

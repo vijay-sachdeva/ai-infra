@@ -1,0 +1,7 @@
+{
+  "name": "Europe AI Infrastructure Monitor — source ledger",
+  "version": "0.1.0",
+  "generated": "2026-06-30",
+  "note": "Per-record source URLs live inline in projects.json (each verified + linkified in the ledger table). This shared ledger is seeded empty for the pilot; it will grow as grid/capital feeds are added and their labels need linkifying.",
+  "ledger": []
+}

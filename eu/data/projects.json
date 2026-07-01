@@ -1,0 +1,866 @@
+{
+  "name": "Europe AI data-center project + power-deal ledger",
+  "version": "0.1.0",
+  "generated": "2026-06-30",
+  "license": "CC-BY-4.0",
+  "schema": "https://github.com/vijay-sachdeva/us-ai-infra/blob/main/schemas/projects.schema.json",
+  "attribution": "AI Infrastructure Monitor — Europe — data CC BY 4.0, https://vijay-sachdeva.github.io/ai-infra/eu",
+  "notes": "Named European AI / hyperscaler data-center campuses, investment programs, and one EU-wide policy initiative. Every record was adversarially re-verified on 2026-06-30 by re-fetching its sources (12 confirmed, 6 corrected, 0 rejected). Hyperscalers rarely disclose site MW, so many records carry capacity_mw=null with the capex figure in the note; disclosed MW figures are ultimate/announced TARGETS unless the note says otherwise. See caveats + known_gaps below.",
+  "record_count": 18,
+  "records": [
+    {
+      "id": "microsoft-uk-ai-datacenters-2023",
+      "name": "Microsoft UK AI datacenter expansion (London, Wales, N. England)",
+      "operator": "Microsoft",
+      "state": "GB",
+      "country_name": "United Kingdom",
+      "location": {
+        "lat": null,
+        "lon": null,
+        "precision": "country"
+      },
+      "capacity_mw": null,
+      "capacity_type": "unspecified",
+      "status": "announced",
+      "status_as_of": "2023-11",
+      "power": {
+        "generation": "Grid power",
+        "model": "Grid"
+      },
+      "note": "Microsoft announced GBP 2.5 billion (~$3.2bn) over three years to expand next-generation AI datacenter infrastructure across UK sites in London and Wales, with potential expansion into northern England, bringing more than 20,000 advanced GPUs to the UK by 2026. Described as Microsoft's single largest UK investment in its 40-year history. No site-level MW capacity disclosed; figure is capex.",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "ms-blog-uk-25bn",
+          "url": "https://blogs.microsoft.com/on-the-issues/2023/11/30/uk-ai-skilling-security-datacenters-investment/",
+          "label": "Microsoft to spend GBP 2.5bn ($3.2bn) expanding next-gen AI datacenter infrastructure; >20,000 GPUs by 2026; sites in London and Wales, potential N. England",
+          "publisher": "Microsoft (On the Issues blog)",
+          "provenance": "operator",
+          "published": "2023-11-30",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "gov-uk-ms-25bn",
+          "url": "https://www.gov.uk/government/news/boost-for-uk-ai-as-microsoft-unveils-25-billion-investment",
+          "label": "UK Government: Microsoft unveils GBP 2.5bn investment to boost UK AI, doubling datacentre capacity",
+          "publisher": "GOV.UK",
+          "provenance": "government",
+          "published": "2023-11-30",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "capex_program"
+    },
+    {
+      "id": "aws-european-sovereign-cloud-brandenburg",
+      "name": "AWS European Sovereign Cloud Region (Brandenburg, Germany)",
+      "operator": "Amazon Web Services (AWS)",
+      "state": "DE",
+      "country_name": "Germany",
+      "location": {
+        "lat": null,
+        "lon": null,
+        "precision": "region"
+      },
+      "capacity_mw": null,
+      "capacity_type": "unspecified",
+      "status": "operational",
+      "status_as_of": "2026-01",
+      "power": {
+        "generation": "Grid power",
+        "model": "Grid"
+      },
+      "note": "AWS plans to invest EUR 7.8 billion through 2040 in its European Sovereign Cloud, a physically and logically separate cloud with all infrastructure in the EU. The first region launched in the State of Brandenburg, Germany (generally available as of early 2026). Projected to contribute EUR 17.2bn to German GDP through 2040. No MW capacity disclosed; figure is capex.",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "aws-esc-78bn",
+          "url": "https://www.aboutamazon.eu/news/aws/aws-plans-to-invest-7-8-billion-into-the-aws-european-sovereign-cloud",
+          "label": "AWS plans to invest EUR 7.8bn through 2040 in the European Sovereign Cloud; first region in Brandenburg, Germany; EUR 17.2bn GDP contribution",
+          "publisher": "Amazon (aboutamazon.eu)",
+          "provenance": "operator",
+          "published": "2024-05",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "aws-esc-launch-2026",
+          "url": "https://aws.amazon.com/blogs/aws/opening-the-aws-european-sovereign-cloud/",
+          "label": "Opening the AWS European Sovereign Cloud: now generally available; first Region in the state of Brandenburg, Germany",
+          "publisher": "Amazon Web Services (AWS News Blog)",
+          "provenance": "operator",
+          "published": "2026-01-14",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "capex_program"
+    },
+    {
+      "id": "aws-aragon-spain-region",
+      "name": "AWS Europe (Spain) Region (Aragon: Zaragoza / Huesca / Teruel)",
+      "operator": "Amazon Web Services (AWS)",
+      "state": "ES",
+      "country_name": "Spain",
+      "location": {
+        "lat": 41.6488,
+        "lon": -0.8891,
+        "precision": "region"
+      },
+      "capacity_mw": null,
+      "capacity_type": "unspecified",
+      "status": "operational",
+      "status_as_of": "2026-03",
+      "power": {
+        "generation": "Grid power; AWS funding water-replenishment projects in Aragon",
+        "model": "Grid"
+      },
+      "note": "AWS originally announced EUR 15.7bn (2024-05-22) for its AWS Europe (Spain) Region in Aragon through 2033. On 2026-03-02 at MWC Barcelona Amazon added EUR 18bn, raising total planned Spain investment to EUR 33.7bn ($39.8bn) and expanding data-center facilities to all three Aragonese provinces (Zaragoza, Huesca, Teruel). No MW capacity disclosed; figures are capex.",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "aboutamazon-spain-157bn-2024",
+          "url": "https://www.aboutamazon.eu/news/job-creation-and-investment/aws-plans-to-invest-15-7-billion-in-spain-supporting-the-creation-of-17-500-jobs-annually-in-local-businesses",
+          "label": "AWS plans to invest EUR 15.7bn in its AWS Europe (Spain) Region in Aragon through 2033",
+          "publisher": "Amazon (aboutamazon.eu)",
+          "provenance": "operator",
+          "published": "2024-05-22",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "aboutamazon-spain-337bn-2026",
+          "url": "https://www.aboutamazon.com/news/company-news/amazon-spain-investment",
+          "label": "Amazon increases Spain investment to EUR 33.7bn ($39.8bn); adds EUR 18bn to the EUR 15.7bn announced in 2024; data centers in Huesca, Zaragoza, Teruel",
+          "publisher": "Amazon (aboutamazon.com)",
+          "provenance": "operator",
+          "published": "2026-03-02",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "lamoncloa-amazon-337bn-2026",
+          "url": "https://www.lamoncloa.gob.es/lang/en/gobierno/news/paginas/2026/20260302-wmc-amazon-investment.aspx",
+          "label": "Spanish Government: Amazon's EUR 33.7bn investment, adding EUR 18bn to the EUR 15.7bn from 2024; located in Aragon",
+          "publisher": "Government of Spain (La Moncloa)",
+          "provenance": "government",
+          "published": "2026-03-02",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "capex_program"
+    },
+    {
+      "id": "aws-uk-data-centres-2024-2028",
+      "name": "AWS UK data centres (London / Manchester Region)",
+      "operator": "Amazon Web Services (AWS)",
+      "state": "GB",
+      "country_name": "United Kingdom",
+      "location": {
+        "lat": null,
+        "lon": null,
+        "precision": "country"
+      },
+      "capacity_mw": null,
+      "capacity_type": "unspecified",
+      "status": "construction",
+      "status_as_of": "2024-09",
+      "power": {
+        "generation": "Grid power",
+        "model": "Grid"
+      },
+      "note": "AWS plans to invest GBP 8bn (~$10.5bn) over five years (2024-2028) building and operating UK data centres; estimated to contribute GBP 14bn to UK GDP and support 14,000+ FTE jobs annually through 2028. Combined with 2020-2023 spend, total planned UK investment 2020-2028 exceeds GBP 11bn. UK Region spans Availability Zones in London and Manchester. No MW capacity disclosed; figure is capex.",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "aboutamazon-uk-8bn-2024",
+          "url": "https://www.aboutamazon.co.uk/news/job-creation-and-investment/aws-plans-to-invest-8-billion-in-the-uk",
+          "label": "AWS plans to invest GBP 8bn over 2024-2028 in UK data centres; GBP 14bn GDP; 14,000+ FTE jobs annually; total 2020-2028 >GBP 11bn",
+          "publisher": "Amazon (aboutamazon.co.uk)",
+          "provenance": "operator",
+          "published": "2024-09-11",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "dcd-aws-uk-8bn-2024",
+          "url": "https://www.datacenterdynamics.com/en/news/aws-to-invest-8bn-in-uk-data-centers-over-five-years/",
+          "label": "AWS to invest GBP 8bn ($10.47bn) over five years from Sept 2024 in UK data centers; Region spans London and Manchester",
+          "publisher": "Data Center Dynamics",
+          "provenance": "trade_press",
+          "published": "2024-09-11",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "capex_program"
+    },
+    {
+      "id": "google-st-ghislain-belgium",
+      "name": "Google St-Ghislain data center campus (Wallonia, Belgium)",
+      "operator": "Google",
+      "state": "BE",
+      "country_name": "Belgium",
+      "location": {
+        "lat": 50.4667,
+        "lon": 3.8167,
+        "precision": "city"
+      },
+      "capacity_mw": null,
+      "capacity_type": "unspecified",
+      "status": "operational",
+      "status_as_of": "2025-10",
+      "power": {
+        "generation": "Grid power; Google-backed onshore wind/solar PPAs plus on-site solar",
+        "model": "Grid"
+      },
+      "note": "Google's first Belgian data center, operational since 2007 at Saint-Ghislain. On 2025-10-07 Google announced a new EUR 5 billion (2026-2027) investment to expand its Wallonia campuses including Saint-Ghislain, bringing total Belgian investment above EUR 11 billion since 2007 and adding ~300 jobs. No site MW capacity disclosed; the announcement covers >110 MW of new wind/solar PPAs and 365 MW of clean energy supported in Belgium to date. A separate second Belgian campus is under construction at Farciennes.",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "google-presscorner-belgium-5bn",
+          "url": "https://www.googlecloudpresscorner.com/2025-10-07-Google-Announces-New-EUR5-Billion-AI-Infrastructure-Investment-in-Belgium-through-2027",
+          "label": "Google press release: EUR 5bn (2026-2027) for St. Ghislain campus; total Belgian investment >EUR 11bn since 2007; >110 MW new wind/solar deals; 365 MW clean energy supported",
+          "publisher": "Google (Cloud Press Corner)",
+          "provenance": "operator",
+          "published": "2025-10-07",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "dcd-belgium-second-campus-1bn",
+          "url": "https://www.datacenterdynamics.com/en/news/google-breaks-ground-on-second-belgian-data-center-campus-worth-1bn/",
+          "label": "DCD: Google expanding existing Saint-Ghislain campus; separate new $1bn Farciennes campus with 200-300MW per grid operator Elia",
+          "publisher": "Data Center Dynamics",
+          "provenance": "trade_press",
+          "published": "2024-04-08",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "capex_program"
+    },
+    {
+      "id": "google-eemshaven-netherlands",
+      "name": "Google Eemshaven / Groningen data center campus (Netherlands)",
+      "operator": "Google",
+      "state": "NL",
+      "country_name": "Netherlands",
+      "location": {
+        "lat": 53.4386,
+        "lon": 6.8333,
+        "precision": "city"
+      },
+      "capacity_mw": null,
+      "capacity_type": "unspecified",
+      "status": "operational",
+      "status_as_of": "2025-11",
+      "power": {
+        "generation": "Grid power matched 100% with renewable purchases since 2017; on-site solar at newer sites",
+        "model": "Grid"
+      },
+      "note": "Google's first Dutch data center opened at Eemshaven in December 2016 (initial EUR 600 million). The Dutch footprint has since grown: Middenmeer (2020) and two more in Groningen province - Winschoten (opened 2025-11-18) and Westpoort - each at EUR 600 million. Total Dutch digital-infrastructure investment exceeds EUR 3.7 billion. No per-site MW capacity disclosed; Google reports supporting >1 GW of clean energy generation in the Netherlands.",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "google-datacenters-eemshaven",
+          "url": "https://datacenters.google/locations/eemshaven-netherlands-var/",
+          "label": "Google data centers site: Eemshaven opened Dec 2016 (EUR 600M); Middenmeer 2020; Winschoten and Westpoort/Groningen at EUR 600M each; 100% renewable match since 2017",
+          "publisher": "Google",
+          "provenance": "operator",
+          "published": "2025",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "google-presscorner-winschoten",
+          "url": "https://www.googlecloudpresscorner.com/2025-11-18-Google-Opens-Data-Center-in-Winschoten-to-Help-Power-the-AI-Economy-in-The-Netherlands",
+          "label": "Google press release: opening of Winschoten (Groningen) data center; >EUR 3.7bn invested in NL digital infrastructure; >1 GW clean energy supported",
+          "publisher": "Google (Cloud Press Corner)",
+          "provenance": "operator",
+          "published": "2025-11-18",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "capex_program"
+    },
+    {
+      "id": "google-waltham-cross-uk",
+      "name": "Google Waltham Cross data center (Hertfordshire, UK)",
+      "operator": "Google",
+      "state": "GB",
+      "country_name": "United Kingdom",
+      "location": {
+        "lat": 51.6859,
+        "lon": -0.0327,
+        "precision": "city"
+      },
+      "capacity_mw": null,
+      "capacity_type": "unspecified",
+      "status": "operational",
+      "status_as_of": "2025-09",
+      "power": {
+        "generation": "Grid power; air-based cooling; provisions for off-site heat recovery; Moray West wind PPA (100 MW)",
+        "model": "Grid"
+      },
+      "note": "Announced 2024-01-18 as a $1 billion investment in Google's first UK data center on a 33-acre site in Waltham Cross, Hertfordshire (land acquired Oct 2020). The site opened in 2025 as part of Google's two-year GBP 5 billion (~$6.8bn) UK investment. No data-center MW capacity disclosed; an associated Moray West wind PPA is cited at 100 MW.",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "google-blog-waltham-cross-1bn",
+          "url": "https://blog.google/around-the-globe/google-europe/united-kingdom/google-1-billion-investment-in-a-new-uk-data-centre/",
+          "label": "Google blog: $1 billion investment, first UK data center on 33-acre Waltham Cross site; air cooling + off-site heat recovery; Moray West 100 MW wind PPA",
+          "publisher": "Google",
+          "provenance": "operator",
+          "published": "2024-01-18",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "dcd-waltham-cross-open",
+          "url": "https://www.datacenterdynamics.com/en/news/google-opens-hertfordshire-data-center-as-part-of-5bn-uk-investment/",
+          "label": "DCD: Google opens Waltham Cross (Hertfordshire) data center as part of GBP 5bn UK investment",
+          "publisher": "Data Center Dynamics",
+          "provenance": "trade_press",
+          "published": "2025",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "capex_program"
+    },
+    {
+      "id": "google-hamina-finland",
+      "name": "Google Hamina (Summa) data center campus (Finland)",
+      "operator": "Google",
+      "state": "FI",
+      "country_name": "Finland",
+      "location": {
+        "lat": 60.5697,
+        "lon": 27.1972,
+        "precision": "city"
+      },
+      "capacity_mw": null,
+      "capacity_type": "unspecified",
+      "status": "announced",
+      "status_as_of": "2024-05",
+      "power": {
+        "generation": "Grid power; seawater cooling; heat recovery with Haminan Energia for district heating",
+        "model": "Grid"
+      },
+      "note": "On 2024-05-20 Google announced a EUR 1 billion expansion of its Hamina data center campus, raising total Finnish investment to approximately EUR 4.5 billion (EUR 3.5 billion invested since 2009). Includes a heat-recovery partnership with Haminan Energia expected to meet ~80% of Hamina's district-heating needs and ~100 additional jobs. No data-center MW capacity disclosed.",
+      "provenance": "government",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "businessfinland-hamina-1bn",
+          "url": "https://www.businessfinland.com/news/2024/google-to-expand-its-data-center-in-finland/",
+          "label": "Business Finland (govt): EUR 1bn Hamina expansion; total Finnish investment >EUR 4.5bn (EUR 3.5bn since 2009); Haminan Energia heat recovery ~80% of district heating",
+          "publisher": "Business Finland",
+          "provenance": "government",
+          "published": "2024-05-20",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "capex_program"
+    },
+    {
+      "id": "meta-talavera-de-la-reina-spain",
+      "name": "Meta Talavera de la Reina Data Center (Torrehierro, Castilla-La Mancha)",
+      "operator": "Meta Platforms",
+      "state": "ES",
+      "country_name": "Spain",
+      "location": {
+        "lat": 39.96,
+        "lon": -4.83,
+        "precision": "city"
+      },
+      "capacity_mw": null,
+      "capacity_type": "unspecified",
+      "status": "planned",
+      "status_as_of": "2024-11",
+      "power": {
+        "generation": "Grid power; mechanical cooling for 24/7 operation",
+        "model": "Grid"
+      },
+      "note": "Meta's Spain campus on a 191-hectare site in the Torrehierro industrial park ~115 km SW of Madrid. Originally announced March 2022 as a ~EUR 1bn ($1.1bn) project; per the November 2024 final project plan, total investment is EUR 748.6m (EUR 685m construction), with ~130,000 sqm of buildings (two data center buildings among five structures). Construction expected to start 2027, running ~10 years to full operation around 2036. MW capacity not disclosed.",
+      "provenance": "trade_press",
+      "transformation": "reported",
+      "confidence": "medium",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "dcd-meta-toledo-2022",
+          "url": "https://www.datacenterdynamics.com/en/news/meta-plans-1bn-data-center-in-toledo-spain/",
+          "label": "Meta's EUR 1bn ($1.1bn) data center on a 191-hectare plot west of Talavera de la Reina (Castilla-La Mancha)",
+          "publisher": "Data Center Dynamics",
+          "provenance": "trade_press",
+          "published": "2022-03-11",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "elespanol-meta-talavera-2024",
+          "url": "https://www.elespanol.com/eldigitalcastillalamancha/economia/empresas/20241118/plan-obras-anos-construir-gigante-tecnologico-meta-talavera-reina-partir/902159796_0.html",
+          "label": "Final plan: EUR 748.6m investment (EUR 685m construction), 191 ha, 130,000 sqm buildings, construction from 2027 over 10 years, full operation ~2036",
+          "publisher": "El Espanol (El Digital de Castilla-La Mancha)",
+          "provenance": "trade_press",
+          "published": "2024-11-18",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "capex_program"
+    },
+    {
+      "id": "meta-odense-denmark",
+      "name": "Meta Odense Data Center (Tietgenbyen, Odense)",
+      "operator": "Meta Platforms",
+      "state": "DK",
+      "country_name": "Denmark",
+      "location": {
+        "lat": 55.38,
+        "lon": 10.46,
+        "precision": "city"
+      },
+      "capacity_mw": 294,
+      "capacity_type": "total_power",
+      "status": "operational",
+      "status_as_of": "2021-12",
+      "power": {
+        "generation": "294 MW renewable from two wind projects; heat recovery to Odense district heating",
+        "model": "Grid"
+      },
+      "note": "Meta's operational hyperscale campus in Odense. First 55,000 sqm building came online in 2019; a December 2021 expansion added two more buildings (~90,000 sqm) toward ~200,000 sqm total and >13 billion DKK (~$1.97bn) total project investment, construction from April 2022. The 294 MW figure is renewable energy supplied by two wind projects (total power supply), not a stated IT critical load. Heat recovery delivers ~165,000 MWh/yr to district heating.",
+      "provenance": "trade_press",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "meta-odense-expansion-2020",
+          "url": "https://datacenters.atmeta.com/2020/10/we-are-expanding-facebooks-odense-data-center/",
+          "label": "Meta's announcement of ~30,000 sqm Odense expansion, >10B DKK investment, heat recovery 165,000 MWh/yr, LEED Gold",
+          "publisher": "Meta Data Centers (atmeta.com)",
+          "provenance": "operator",
+          "published": "2020-10",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "dcd-odense-expand-2021",
+          "url": "https://www.datacenterdynamics.com/en/news/metafacebook-to-expand-odense-data-center-campus-in-denmark/",
+          "label": "Odense campus expansion adding two buildings (~90,000 sqm) toward ~200,000 sqm; >13 billion DKK ($1.97bn) total investment; 294 MW supported by two wind projects",
+          "publisher": "Data Center Dynamics",
+          "provenance": "trade_press",
+          "published": "2021-12-13",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "campus"
+    },
+    {
+      "id": "mgx-bpifrance-nvidia-mistral-paris-1-4gw-campus",
+      "name": "Europe's largest AI campus, Paris region (MGX / Bpifrance / Nvidia / Mistral AI JV)",
+      "operator": "MGX, Bpifrance, Mistral AI, NVIDIA (with Bouygues, EDF, RTE)",
+      "state": "FR",
+      "country_name": "France",
+      "location": {
+        "lat": null,
+        "lon": null,
+        "precision": "region"
+      },
+      "capacity_mw": 1400,
+      "capacity_type": "total_power",
+      "status": "announced",
+      "status_as_of": "2025-05",
+      "power": {
+        "generation": "Low-carbon French grid (nuclear), with RTE/EDF as ecosystem partners",
+        "model": "Grid"
+      },
+      "note": "Joint venture announced 19-20 May 2025 (Choose France summit) to build what partners call Europe's largest AI campus in the Paris region, reaching up to 1.4GW at maturity. Construction expected to begin H2 2026, operations by 2028. The 1.4GW is the ultimate announced target capacity; investment amount and exact site were not disclosed.",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "medium",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "polytechnique-mgx-jv-1-4gw",
+          "url": "https://www.polytechnique.edu/en/press-room/press-releases/mgx-bpifrance-mistral-ai-and-nvidia-launch-joint-venture-build-europes-largest-ai-campus-france",
+          "label": "MGX, Bpifrance, Mistral AI and NVIDIA launch JV to build Europe's largest AI campus in France, 1.4GW capacity, Paris region; construction H2 2026, operations by 2028",
+          "publisher": "Ecole Polytechnique",
+          "provenance": "operator",
+          "published": "2025-05-19",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "dcd-mgx-1-4gw-paris-campus",
+          "url": "https://www.datacenterdynamics.com/en/news/mgx-bpifrance-nvidia-and-mistral-ai-plan-14gw-paris-data-center-campus/",
+          "label": "MGX, Bpifrance, Nvidia and Mistral AI plan 1.4GW data center campus outside Paris; construction H2 2026, operations by 2028; investment not disclosed",
+          "publisher": "Data Center Dynamics",
+          "provenance": "trade_press",
+          "published": "2025-05-20",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "campus"
+    },
+    {
+      "id": "mistral-eclairion-bruyeres-le-chatel-44mw",
+      "name": "Mistral AI flagship data center, Bruyeres-le-Chatel (operated by Eclairion)",
+      "operator": "Mistral AI (data center operated by Eclairion)",
+      "state": "FR",
+      "country_name": "France",
+      "location": {
+        "lat": 48.62,
+        "lon": 2.17,
+        "precision": "city"
+      },
+      "capacity_mw": 44,
+      "capacity_type": "total_power",
+      "status": "construction",
+      "status_as_of": "2026-03",
+      "power": {
+        "generation": "French grid, predominantly nuclear / low-carbon",
+        "model": "Grid"
+      },
+      "note": "Mistral AI's first major data center, in Bruyeres-le-Chatel (Essonne, south of Paris), operated by French firm Eclairion. 44MW of powered capacity housing 13,800 Nvidia GB300 GPUs (revised from an initial plan of 18,000 GB200). Funded in part by $830M debt financing from a banking consortium, announced 30 March 2026; operations targeted by end of June 2026. First node toward Mistral's goal of 200MW across Europe by end-2027.",
+      "provenance": "trade_press",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "dcd-mistral-830m-bruyeres",
+          "url": "https://www.datacenterdynamics.com/en/news/mistral-ai-raises-830m-in-debt-financing-for-data-center-in-paris-france/",
+          "label": "Mistral AI raises $830m debt financing for its Bruyeres-le-Chatel data center operated by Eclairion: 44MW, 13,800 Nvidia GB300 GPUs, operations by end of June 2026; 200MW Europe-wide target by end-2027",
+          "publisher": "Data Center Dynamics",
+          "provenance": "trade_press",
+          "published": "2026-03-30",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "campus"
+    },
+    {
+      "id": "microsoft-france-4bn-cloud-ai-2024",
+      "name": "Microsoft France EUR 4bn cloud & AI investment (Mulhouse / Paris / Marseille)",
+      "operator": "Microsoft",
+      "state": "FR",
+      "country_name": "France",
+      "location": {
+        "lat": null,
+        "lon": null,
+        "precision": "region"
+      },
+      "capacity_mw": null,
+      "capacity_type": "unspecified",
+      "status": "announced",
+      "status_as_of": "2024-05",
+      "power": {
+        "generation": "French grid, predominantly nuclear",
+        "model": "Grid"
+      },
+      "note": "Microsoft announced EUR 4 billion (~$4.3bn at May 2024 rates) to expand its next-generation cloud and AI infrastructure in France: a new data center campus in Mulhouse (Grand Est) plus expansion of existing data centers in the Paris and Marseille regions, and bringing up to 25,000 of the most advanced GPUs to the country by end of 2025. Announced at the Choose France summit (13 May 2024). The press release attaches no completion deadline to the EUR 4bn capex itself (the 'by end of 2027' target in the release refers to the skilling goal, not the capex). No specific MW capacity disclosed; figure is capex.",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "microsoft-news-france-4bn",
+          "url": "https://news.microsoft.com/fr-fr/2024/05/13/microsoft-announces-the-largest-investment-to-date-in-france-to-accelerate-the-adoption-of-ai-skilling-and-innovation/",
+          "label": "Microsoft announces EUR 4bn investment in France by end 2027: new datacenter campus in Mulhouse (Grand Est), expansion in Paris and Marseille, up to 25,000 GPUs by end 2025",
+          "publisher": "Microsoft News Center",
+          "provenance": "operator",
+          "published": "2024-05-13",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "capex_program"
+    },
+    {
+      "id": "eu-ai-gigafactories-investai",
+      "name": "EU AI Gigafactories (InvestAI, EU-wide)",
+      "operator": "European Commission / EuroHPC Joint Undertaking",
+      "state": "EU",
+      "country_name": "European Union",
+      "location": {
+        "lat": null,
+        "lon": null,
+        "precision": "country"
+      },
+      "capacity_mw": null,
+      "capacity_type": "unspecified",
+      "status": "announced",
+      "status_as_of": "2025-12",
+      "power": {
+        "generation": "Not specified; sites to be selected",
+        "model": "Unknown"
+      },
+      "note": "EU-wide initiative announced Feb 2025 to mobilise EUR 20 billion via InvestAI to establish up to 5 AI gigafactories, each operating ~100,000 advanced AI chips (about 4x current EU AI factories). No site selected or named yet: an informal call drew ~76-77 proposals across 16 Member States and 60 sites; official call expected summer 2026, construction from 2027. Capacity is expressed in chips, not MW.",
+      "provenance": "government",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "ec-ai-gigafactories",
+          "url": "https://commission.europa.eu/topics/competitiveness/competitiveness-coordination-tool-projects/ai-gigafactories_en",
+          "label": "EUR 20bn to finance several AI Gigafactories; 77 proposals across 16 Member States and 60 sites; official call summer 2026, construction 2027",
+          "publisher": "European Commission",
+          "provenance": "government",
+          "published": "2025",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "eib-ec-gigafactories",
+          "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
+          "label": "EUR 20bn via InvestAI to establish up to five AI gigafactories, each ~100,000 advanced AI chips",
+          "publisher": "European Investment Bank",
+          "provenance": "government",
+          "published": "2025-12-04",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "policy_program"
+    },
+    {
+      "id": "start-campus-sines-portugal",
+      "name": "Start Campus SINES Data Campus / SIN01 (Sines, Portugal)",
+      "operator": "Start Campus (backed by Davidson Kempner, Pioneer Point Partners)",
+      "state": "PT",
+      "country_name": "Portugal",
+      "location": {
+        "lat": 37.95,
+        "lon": -8.87,
+        "precision": "city"
+      },
+      "capacity_mw": 1200,
+      "capacity_type": "total_power",
+      "status": "construction",
+      "status_as_of": "2025-04",
+      "power": {
+        "generation": "100% renewable energy; seawater cooling, design PUE 1.1, WUE 0",
+        "model": "Grid"
+      },
+      "note": "SIN01 (first building, 26MW) started operations Q4 2024 and was inaugurated 4 Apr 2025 - described as Portugal's largest data center. It is the first of six buildings in the planned 1.2GW SINES Data Campus, an EUR 8.5 billion privately funded project; the next 180MW building (SIN02) was due to begin later in 2025. The 1.2GW (1200 MW) is the ultimate campus target, not current capacity.",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "startcampus-sin01",
+          "url": "https://www.startcampus.pt/start-campus-inaugurates-sin01-data-center",
+          "label": "SIN01 26MW inaugurated; first of six buildings in 1.2GW SINES campus; EUR 8.5bn privately funded; seawater cooling, PUE 1.1, 100% renewable",
+          "publisher": "Start Campus",
+          "provenance": "operator",
+          "published": "2025-04-04",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "dcd-startcampus-sin01",
+          "url": "https://www.datacenterdynamics.com/en/news/start-campus-launches-sin01-facility-in-sines-portugal/",
+          "label": "Start Campus launches SIN01 in Sines; 1.2GW campus across six buildings; Nautilus seawater cooling",
+          "publisher": "Data Center Dynamics",
+          "provenance": "trade_press",
+          "published": "2025-01",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "campus"
+    },
+    {
+      "id": "nebius-mantsala-finland",
+      "name": "Nebius Mantsala Data Center (Mantsala, Finland)",
+      "operator": "Nebius (formerly Yandex N.V.)",
+      "state": "FI",
+      "country_name": "Finland",
+      "location": {
+        "lat": 60.63,
+        "lon": 25.32,
+        "precision": "city"
+      },
+      "capacity_mw": 75,
+      "capacity_type": "total_power",
+      "status": "construction",
+      "status_as_of": "2024-10",
+      "power": {
+        "generation": "Grid power; PUE as low as 1.1, free cooling + heat recovery (~20,000 MWh/yr)",
+        "model": "Grid"
+      },
+      "note": "Nebius announced (8 Oct 2024) tripling its Mantsala facility from 25MW to 75MW, enabling up to 60,000 GPUs (NVIDIA H100/H200, Blackwell from 2025). The 75MW is the expansion target. No standalone capex disclosed for the site; tied to a broader >$1bn European AI-infrastructure program.",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "nebius-mantsala-75mw",
+          "url": "https://nebius.com/newsroom/nebius-to-triple-capacity-at-finland-data-center-to-75-mw",
+          "label": "Mantsala tripling 25MW to 75MW, up to 60,000 GPUs (H100/H200/Blackwell), PUE ~1.1",
+          "publisher": "Nebius",
+          "provenance": "operator",
+          "published": "2024-10-08",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "dcd-nebius-mantsala",
+          "url": "https://www.datacenterdynamics.com/en/news/nebius-to-triple-capacity-of-mantsala-data-center-in-finland/",
+          "label": "Nebius to triple capacity of Mantsala data center in Finland to 75MW",
+          "publisher": "Data Center Dynamics",
+          "provenance": "trade_press",
+          "published": "2024-10",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "campus"
+    },
+    {
+      "id": "ntt-fra6-nierstein-germany",
+      "name": "NTT FRA6 Data Center Campus (Nierstein / Rhein-Selz, Germany)",
+      "operator": "NTT Global Data Centers (NTT GDC)",
+      "state": "DE",
+      "country_name": "Germany",
+      "location": {
+        "lat": 49.87,
+        "lon": 8.34,
+        "precision": "city"
+      },
+      "capacity_mw": 482,
+      "capacity_type": "total_power",
+      "status": "planned",
+      "status_as_of": "2025-12",
+      "power": {
+        "generation": "Targeted 100% renewable via PPAs; adjacent SelzEnergie wind farm planned",
+        "model": "Grid"
+      },
+      "note": "482MW campus (~9 buildings) on a 75-hectare former US Army barracks (Anderson Barracks) in Nierstein, Rhein-Selz, ~50km south of Frankfurt. Council approval of the development plan was granted Dec 2025 (binding expected Q1 2026); ground could break in early 2027 for a 2029 launch. Described by trade press as one of the largest planned data centers in Europe. Capex not disclosed. The 482MW is the ultimate full-campus target.",
+      "provenance": "trade_press",
+      "transformation": "reported",
+      "confidence": "high",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "dcd-ntt-nierstein",
+          "url": "https://www.datacenterdynamics.com/en/news/ntt-gains-council-approval-for-482mw-data-center-campus-in-nierstein-germany/",
+          "label": "NTT GDC gains unanimous council approval for 482MW campus, ~9 buildings, 75ha former US barracks, ~50km south of Frankfurt; ground ~2027, operational ~2029",
+          "publisher": "Data Center Dynamics",
+          "provenance": "trade_press",
+          "published": "2025-12",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "campus"
+    },
+    {
+      "id": "igenius-colosseum-southern-italy",
+      "name": "Colosseum AI Supercomputer (iGenius, Southern Italy)",
+      "operator": "iGenius, with NVIDIA and Vertiv",
+      "state": "IT",
+      "country_name": "Italy",
+      "location": {
+        "lat": null,
+        "lon": null,
+        "precision": "region"
+      },
+      "capacity_mw": 7,
+      "capacity_type": "it_critical_load",
+      "status": "planned",
+      "status_as_of": "2025-04",
+      "power": {
+        "generation": "Powered by surplus regional renewable energy; 132kW liquid-cooled racks",
+        "model": "Grid"
+      },
+      "note": "Sovereign AI 'DGX SuperPOD' for regulated sectors in southern Italy. Reference deployment is ~7MW (132kW/rack, scalable), built around ~80 NVIDIA GB200 NVL72 systems delivering ~115 exaflops (DCD notes exact compute was not officially confirmed). Capex reported as $1 billion over five years (announced Jan 2025); deployment targeted for 2025. Location is region-level (southern Italy; Puglia floated but not site-confirmed). The 7MW is the reference initial deployment, not an ultimate cap. iGenius has since rebranded to 'Domyn'; a G42/Core42 partnership of ~EUR 1bn is associated. As of the 2025-04 announcement the project was pre-deployment (planned).",
+      "provenance": "operator",
+      "transformation": "reported",
+      "confidence": "medium",
+      "revision": 1,
+      "sources": [
+        {
+          "source_id": "vertiv-colosseum-release",
+          "url": "https://www.vertiv.com/en-emea/about/news-and-insights/news-releases/igenius-launches-one-of-the-worlds-largest-sovereign-ai-data-centers-leveraging-vertiv-infrastructure-nvidia-accelerated-computing-and-omniverse/",
+          "label": "Operator/partner release: iGenius launches sovereign AI data center in southern Italy using Vertiv infra + NVIDIA Grace Blackwell, 132kW liquid-cooled racks, deploy 2025",
+          "publisher": "Vertiv",
+          "provenance": "operator",
+          "published": "2025-04-23",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        },
+        {
+          "source_id": "dcd-colosseum",
+          "url": "https://www.datacenterdynamics.com/en/news/vertiv-nvidia-and-igenius-partner-on-ai-supercomputer-colosseum/",
+          "label": "Trade press: 7MW deployment, 132kW/rack, 80 GB200 NVL72, 115 exaflops, $1bn over 5 years, southern Italy, renewable surplus",
+          "publisher": "Data Center Dynamics",
+          "provenance": "trade_press",
+          "published": "2025-04-22",
+          "retrieved": "2026-06-30",
+          "supports_claim": true
+        }
+      ],
+      "record_type": "campus"
+    }
+  ],
+  "caveats": [
+    "DO NOT sum capacity_mw across records: only some records disclose MW, and those mix total_power targets (e.g. Sines 1200 MW ultimate vs ~26 MW live; MGX Paris 1.4 GW at maturity), a wind-supply figure (Meta Odense 294 MW), and one it_critical_load number (iGenius 7 MW). Always segment by capacity_type + status.",
+    "Most hyperscaler records are capex programs (capacity_mw=null) spanning many unnamed sites over differing windows (2027-2040) and currencies (EUR/GBP/USD) - do not sum investment without normalizing.",
+    "record_count counts tracked records, not physical data centers: some records bundle multiple sites (e.g. Google Netherlands = 4 sites) and one (EU AI Gigafactories) is an EU-wide policy program with no site or MW.",
+    "record_type distinguishes 'campus' (a sited facility with MW), 'capex_program' (country-level spend), and 'policy_program' (the EU-wide InvestAI gigafactories initiative). Only 'campus' rows should be mapped or treated as facilities."
+  ],
+  "known_gaps": [
+    "Ireland / Dublin - the largest omission. Dublin is Europe's canonical hyperscale + AI market (Microsoft, Google, AWS, Meta campuses at Leixlip/Clonee, plus new AI builds). A flagship Irish campus is the #1 addition for v0.2.",
+    "Neo-cloud / GPU specialists beyond Nebius: CoreWeave EU, Nscale (UK), Crusoe, Lambda EU.",
+    "OpenAI / Stargate-Europe and xAI have no confirmed EU-site record here (add explicitly, or note as 'no confirmed EU site').",
+    "Colocation / wholesale mega-campus operators hosting hyperscale AI: Vantage, CyrusOne, Equinix, Digital Realty (only NTT Nierstein is present).",
+    "Geographic skew toward FR/ES/GB/DE/Nordics; no Poland/Central Europe, and Nordic coverage is limited to two Finland sites."
+  ],
+  "verification": {
+    "method": "adversarial per-record source re-fetch + set-level editorial critic",
+    "date": "2026-06-30",
+    "confirmed": 12,
+    "corrected": 6,
+    "rejected": 0
+  }
+}

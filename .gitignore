@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Parquet mirrors (CSV is canonical; regenerate on demand)
+*.parquet
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp

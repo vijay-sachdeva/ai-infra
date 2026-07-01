@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Infrastructure Monitor — Europe</title>
+<meta name="description" content="An open, source-linked ledger of Europe's largest AI / hyperscaler data-center campuses and investments. Data CC BY 4.0. A lean pilot that grows as verified data matures." />
+<link rel="canonical" href="https://vijay-sachdeva.github.io/ai-infra/eu/" />
+<meta property="og:title" content="AI Infrastructure Monitor — Europe" />
+<meta property="og:description" content="Open, source-linked ledger of Europe's largest AI data-center campuses & investments. CC BY 4.0." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vijay-sachdeva.github.io/ai-infra/eu/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<!-- Chart.js + plugins + D3 (loaded for parity with the shared engine; the EU pilot's enabled
+     tabs are HTML/table-based, but the engine references these and future EU charts will use them) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1"></script>
+<style>
+  :root {
+    --bg: #f4f6f8; --card: #ffffff; --ink: #0f1b2d; --ink-2: #475569; --muted: #8a97a8;
+    --line: #e6e9ee; --accent: #1d4ed8; --accent-soft: #eef3ff;
+    --amber: #c2710c; --amber-soft: #fdf3e6; --green: #15803d; --green-soft: #ecf7ef;
+    --red: #c0322b; --red-soft: #fbeceb;
+    --shadow: 0 1px 2px rgba(15,27,45,.04), 0 6px 20px rgba(15,27,45,.05);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--ink); line-height: 1.5; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 22px; }
+  a { color: var(--accent); }
+
+  /* Region switcher / top banner */
+  .top-banner { background: #f8fafc; color: var(--ink-2); border-bottom: 1px solid var(--line); font-size: 12px; font-weight: 500; padding: 8px 0; }
+  .top-banner .tb-wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 1180px; padding: 0 22px; margin: 0 auto; }
+  .region-switch { display: inline-flex; gap: 4px; align-items: center; }
+  .region-switch a { text-decoration: none; color: var(--ink-2); font-weight: 600; padding: 2px 8px; border-radius: 6px; }
+  .region-switch a.on { background: var(--accent-soft); color: var(--accent); }
+  .region-switch a:hover { color: var(--accent); }
+  .tb-right { color: var(--muted); }
+
+  /* Header */
+  header.site { background: var(--card); border-bottom: 1px solid var(--line); }
+  .head-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 22px; max-width: 1180px; margin: 0 auto; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand .glyph { width: 38px; height: 38px; border-radius: 9px; background: linear-gradient(135deg, #1d4ed8, #3b82f6); display: flex; align-items: center; justify-content: center; flex: none; color: #fff; font-weight: 800; font-size: 18px; }
+  .brand h1 { font-size: 16px; font-weight: 700; letter-spacing: -.01em; }
+  .brand p { font-size: 12px; color: var(--muted); font-weight: 500; }
+  .head-meta { display: flex; align-items: center; gap: 14px; }
+  .head-meta .updated { font-size: 12px; color: var(--muted); font-weight: 500; white-space: nowrap; }
+  .pilot-badge { background: var(--amber); color: #fff; font-size: 11px; font-weight: 700; padding: 5px 10px; border-radius: 4px; letter-spacing: .04em; text-transform: uppercase; }
+
+  /* Tab nav */
+  nav.tabs { background: var(--card); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; box-shadow: 0 1px 0 rgba(15,27,45,0.02); }
+  nav.tabs ul { list-style: none; display: flex; gap: 4px; margin: 0 auto; padding: 0 22px; max-width: 1180px; overflow-x: auto; }
+  nav.tabs a { display: block; padding: 14px 14px 12px; color: var(--ink-2); text-decoration: none; font-size: 14px; font-weight: 600; border-bottom: 2px solid transparent; white-space: nowrap; transition: color .12s, border-color .12s; cursor: pointer; }
+  nav.tabs a:hover { color: var(--ink); }
+  nav.tabs a.active { color: var(--accent); border-bottom-color: var(--accent); }
+  nav.tabs a[data-tab="buildout"].active { color: #c2710c; border-bottom-color: #c2710c; }
+  nav.tabs a[data-tab="grid"].active { color: #c0322b; border-bottom-color: #c0322b; }
+
+  /* Content */
+  main { padding: 26px 0 60px; }
+  section.tab-content { display: none; }
+  section.tab-content.active { display: block; animation: fadeIn .15s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(2px); } to { opacity: 1; transform: translateY(0); } }
+  h2.tab-title { font-size: 26px; letter-spacing: -0.01em; margin-bottom: 4px; }
+  p.tab-sub { font-size: 14px; color: var(--ink-2); margin-bottom: 18px; max-width: 760px; }
+
+  .so-what { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 16px 20px; border-radius: 8px; margin: 16px 0 24px; }
+  .so-what label { font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; }
+  .so-what h3 { font-size: 17.5px; font-weight: 600; margin-top: 4px; line-height: 1.4; }
+  section[data-tab="buildout"] .so-what { border-left-color: #c2710c; background: #fff8eb; }
+  section[data-tab="buildout"] .so-what label { color: #c2710c; }
+
+  /* EU overview hero + headline stats */
+  .eu-hero h2 { font-size: 30px; line-height: 1.15; letter-spacing: -0.02em; max-width: 860px; }
+  .eu-hero .lede { font-size: 15px; color: var(--ink-2); margin: 12px 0 6px; max-width: 780px; }
+  .eu-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 24px 0; }
+  @media (max-width: 780px) { .eu-stats { grid-template-columns: 1fr 1fr; } }
+  .eu-stat { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; box-shadow: var(--shadow); }
+  .eu-stat .n { font-size: 26px; font-weight: 800; color: var(--ink); letter-spacing: -0.01em; }
+  .eu-stat .l { font-size: 12px; color: var(--muted); font-weight: 600; margin-top: 3px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; box-shadow: var(--shadow); margin-bottom: 20px; }
+  .card h3.card-title { font-size: 16px; margin-bottom: 4px; }
+  .card p.card-sub { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .note-block { font-size: 12.5px; color: var(--ink-2); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; margin-top: 14px; line-height: 1.55; }
+  .note-block b { color: var(--ink); }
+
+  /* Ledger table (matches the shared engine's renderMegaProjects output) */
+  #megaProjectsList { overflow-x: auto; }
+  .mp-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 12.5px; min-width: 560px; }
+  .mp-table th { text-align: left; padding: 8px 10px; background: var(--bg); font-size: 10.5px; font-weight: 700; color: var(--ink-2); text-transform: uppercase; letter-spacing: .04em; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .mp-table td { padding: 10px; border-bottom: 1px solid var(--line); color: var(--ink-2); vertical-align: top; }
+  .mp-table tr:last-child td { border-bottom: none; }
+  .mp-table .mp-name { font-weight: 700; color: var(--ink); }
+  .mp-table .mp-op { font-weight: 600; }
+  .mp-table .mp-mw { font-family: 'Courier New', monospace; font-weight: 800; color: var(--ink); text-align: right; white-space: nowrap; }
+  .mp-table .mp-status { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+  .mp-table .mp-status.construction { background: var(--amber-soft); color: var(--amber); }
+  .mp-table .mp-status.planned { background: var(--accent-soft); color: var(--accent); }
+  .mp-table .mp-status.announced { background: var(--line); color: var(--ink-2); }
+  .mp-table .mp-status.operational { background: var(--green-soft); color: var(--green); }
+  .mp-table .mp-power { display: inline-block; font-size: 10px; font-weight: 700; padding: 1px 7px; border-radius: 4px; white-space: nowrap; }
+  .mp-table .mp-power.btm { background: var(--amber-soft); color: var(--amber); }
+  .mp-table .mp-power.colocated { background: var(--accent-soft); color: var(--accent); }
+  .mp-table .mp-power.grid, .mp-table .mp-power.unknown { background: var(--line); color: var(--ink-2); }
+  .mp-table .mp-src { font-size: 10.5px; font-style: italic; color: var(--muted); display: block; margin-top: 2px; }
+  a.mp-src { text-decoration: none; } a.mp-src:hover { color: var(--accent); text-decoration: underline; }
+  .mp-table .mp-risk { display: block; font-size: 11px; color: var(--ink-2); margin-top: 4px; font-weight: 500; line-height: 1.4; }
+  .mp-table tfoot td { background: var(--bg); font-weight: 700; color: var(--ink); }
+  .mp-data-actions { margin-top: 10px; font-size: 11px; color: var(--muted); }
+  .mp-data-actions a { color: var(--accent); text-decoration: none; }
+  .cf-tier { display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 4px; font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; vertical-align: middle; }
+  .cf-tier.cf-ok { background: var(--green-soft); color: var(--green); }
+  .cf-tier.cf-warn { background: var(--amber-soft); color: var(--amber); }
+  .cf-tier.cf-crit { background: var(--red-soft); color: var(--red); }
+
+  /* Operator monograms (used by the engine's brandMark, kept for future use) */
+  .brand-mark { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; border-radius: 3px; font-size: 9px; font-weight: 800; color: #fff; flex: none; line-height: 1; margin-right: 6px; vertical-align: middle; }
+  .brand-mark.b-aws { background: #ff9900; color: #232f3e; } .brand-mark.b-microsoft { background: #0078d4; }
+  .brand-mark.b-google { background: #4285f4; } .brand-mark.b-meta { background: #0866ff; }
+  .brand-mark.b-oracle { background: #c74634; } .brand-mark.b-nvidia { background: #76b900; }
+  .brand-mark.b-nebius { background: #0ea5e9; } .brand-mark.b-other { background: #64748b; }
+
+  /* Theme toggle */
+  .theme-toggle { background: none; border: 1px solid var(--line); border-radius: 7px; padding: 6px 8px; cursor: pointer; color: var(--ink-2); display: inline-flex; align-items: center; justify-content: center; transition: color .15s ease, border-color .15s ease; }
+  .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+  .theme-toggle svg { width: 16px; height: 16px; display: block; }
+  .theme-toggle .sun-icon { display: none; }
+  [data-theme="dark"] .theme-toggle .moon-icon { display: none; }
+  [data-theme="dark"] .theme-toggle .sun-icon { display: block; }
+
+  /* Footer */
+  .site-footer { border-top: 1px solid var(--line); margin-top: 34px; padding: 22px 22px 40px; }
+  .sf-inner { max-width: 1180px; margin: 0 auto; }
+  .sf-line { font-size: 12.5px; color: var(--ink-2); }
+  .sf-nav { display: flex; flex-wrap: wrap; gap: 14px; margin: 10px 0; }
+  .sf-nav a { font-size: 12.5px; color: var(--accent); text-decoration: none; }
+  .sf-cite { font-size: 11.5px; color: var(--muted); margin-top: 6px; }
+
+  /* Mobile */
+  @media (max-width: 720px) {
+    .top-banner .tb-wrap { flex-direction: column; align-items: flex-start; gap: 3px; }
+    .head-inner { flex-wrap: wrap; gap: 10px; }
+    .brand h1 { font-size: 14.5px; }
+    .head-meta { gap: 10px; }
+    .head-meta .updated { display: none; }
+    .eu-hero h2 { font-size: 23px; }
+    nav.tabs a { padding: 12px 10px 10px; font-size: 13px; }
+  }
+
+  /* Dark mode */
+  [data-theme="dark"] { --bg: #0f172a; --card: #1e293b; --ink: #f1f5f9; --ink-2: #cbd5e1; --muted: #94a3b8; --line: #334155; --accent: #60a5fa; --accent-soft: #1e3a8a; --amber: #fbbf24; --amber-soft: #422006; --green: #4ade80; --green-soft: #052e1c; --red: #f87171; --red-soft: #3f1212; --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 20px rgba(0,0,0,.3); }
+  [data-theme="dark"] .top-banner { background: #1e293b; border-bottom-color: #334155; }
+  [data-theme="dark"] header.site, [data-theme="dark"] nav.tabs { background: #1e293b; }
+</style>
+</head>
+<body>
+
+<div class="top-banner">
+  <div class="tb-wrap">
+    <div class="region-switch">
+      <span style="color:var(--muted);margin-right:4px">Region:</span>
+      <a href="https://vijay-sachdeva.github.io/us-ai-infra/">United States</a>
+      <a class="on" href="./">Europe</a>
+    </div>
+    <div class="tb-right">Open data · CC BY 4.0 · a lean pilot, growing as data matures</div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="head-inner">
+    <div class="brand">
+      <div class="glyph">AI</div>
+      <div>
+        <h1>AI Infrastructure Monitor — Europe</h1>
+        <p>Named European AI data-center campuses &amp; investments · source-linked</p>
+      </div>
+    </div>
+    <div class="head-meta">
+      <span class="updated">Updated <span class="tb-date"></span></span>
+      <span class="pilot-badge">Pilot v0.1</span>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <ul>
+    <li><a data-tab="overview" href="#overview">Overview</a></li>
+    <li><a data-tab="buildout" href="#buildout">Campuses</a></li>
+    <li><a data-tab="grid" href="#grid">Grid &amp; power</a></li>
+    <li><a data-tab="capital" href="#capital">Capital</a></li>
+    <li><a data-tab="tokens" href="#tokens">Compute</a></li>
+  </ul>
+</nav>
+
+<main class="wrap">
+
+  <!-- OVERVIEW: static, curated Europe intro + headline stats (no US-specific hero) -->
+  <section class="tab-content" data-tab="overview" data-tab-label="Overview">
+    <div class="eu-hero">
+      <h2>Europe is racing to build sovereign AI capacity — one campus and gigawatt deal at a time.</h2>
+      <p class="lede">This is a lean, source-linked pilot: an open ledger of Europe's largest AI / hyperscaler
+        data-center campuses and investment programs. Every record is verified against primary sources.
+        We start with what we can stand behind and add tabs (grid, capital, compute) as verified European
+        data matures — never faking parity with the more mature US dashboard.</p>
+    </div>
+    <div class="eu-stats">
+      <div class="eu-stat"><div class="n">18</div><div class="l">tracked records</div></div>
+      <div class="eu-stat"><div class="n">10 + EU</div><div class="l">countries + EU-wide initiative</div></div>
+      <div class="eu-stat"><div class="n">11</div><div class="l">operators &amp; JVs</div></div>
+      <div class="eu-stat"><div class="n">100%</div><div class="l">records source-verified</div></div>
+    </div>
+    <div class="note-block">
+      <b>How to read this pilot.</b> The ledger mixes three record types: <b>campuses</b> (a sited facility,
+      sometimes with disclosed MW), <b>capex programs</b> (country-level investment, no single sited MW — most
+      hyperscaler entries), and one <b>policy program</b> (the EU-wide InvestAI gigafactories initiative).
+      Because of that, MW figures are not directly comparable and should not be summed — see the caveats in the
+      <a href="data/projects.json" target="_blank" rel="noopener">open dataset</a>. Known gap: Ireland/Dublin, the
+      #1 addition for the next version.
+      <br><br>See the <a href="#buildout">Campuses</a> tab for the full ledger.
+    </div>
+  </section>
+
+  <!-- CAMPUSES: the flagship EU ledger, rendered by the shared engine's renderMegaProjects -->
+  <section class="tab-content" data-tab="buildout" data-tab-label="Campuses">
+    <h2 class="tab-title">European AI data-center campuses &amp; investments</h2>
+    <p class="tab-sub">Named builds and power/investment deals across Europe. Each row links to a verified primary
+      source; per-record provenance, capacity type, and confidence travel with the open dataset.</p>
+    <div class="so-what">
+      <label>The flagship dataset</label>
+      <h3>18 source-verified records — campuses, country capex programs, and the EU's InvestAI gigafactories.</h3>
+    </div>
+    <div class="card">
+      <h3 class="card-title">The ledger</h3>
+      <p class="card-sub">Sorted by disclosed capacity. Hyperscalers rarely publish site MW, so many rows show a dash
+        (&mdash;) for MW with the investment figure in the note.</p>
+      <div id="megaProjectsList"><p style="color:var(--muted);font-size:13px;padding:12px">Loading ledger…</p></div>
+      <div class="note-block"><b>Do not sum the MW column.</b> Disclosed figures mix ultimate campus targets
+        (e.g. Sines 1.2 GW vs ~26 MW live today), a wind-supply figure (Meta Odense), and one IT-critical-load
+        number — and most records disclose no MW at all. Always read capacity alongside <b>status</b> and
+        <b>capacity type</b>. Full caveats &amp; known gaps are in the <a href="data/projects.json" target="_blank" rel="noopener">dataset</a>.</div>
+    </div>
+  </section>
+
+  <!-- Capability-gated tabs: the engine fills these with an honest "not yet tracked" placeholder -->
+  <section class="tab-content" data-tab="grid" data-tab-label="Grid &amp; power"></section>
+  <section class="tab-content" data-tab="capital" data-tab-label="Capital"></section>
+  <section class="tab-content" data-tab="tokens" data-tab-label="Compute"></section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="sf-inner">
+    <div class="sf-line">AI Infrastructure Monitor — Europe · open &amp; source-linked. Code <a href="https://github.com/vijay-sachdeva/ai-infra/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>, data <a href="https://github.com/vijay-sachdeva/ai-infra/blob/main/eu/data/LICENSE" target="_blank" rel="noopener">CC BY 4.0</a>.</div>
+    <nav class="sf-nav" aria-label="Data &amp; methods">
+      <a href="https://github.com/vijay-sachdeva/ai-infra" target="_blank" rel="noopener">GitHub</a>
+      <a href="data/projects.json" target="_blank" rel="noopener">Europe dataset (JSON)</a>
+      <a href="https://vijay-sachdeva.github.io/us-ai-infra/" target="_blank" rel="noopener">US dashboard</a>
+      <a href="https://github.com/vijay-sachdeva/us-ai-infra/blob/main/schemas/projects.schema.json" target="_blank" rel="noopener">Schema</a>
+    </nav>
+    <div class="sf-cite">Suggested citation: “AI Infrastructure Monitor — Europe — data CC BY 4.0, vijay-sachdeva.github.io/ai-infra/eu.” Best-available estimates with uncertainty; not investment advice. A lean pilot — coverage is incomplete (see dataset known_gaps).</div>
+  </div>
+</footer>
+
+<!-- Region config (defines REGION_CONFIG) then the shared engine (defines/uses DATA) -->
+<script>
+  // Minimal inline DATA — the offline fallback. hydrate() overlays data/projects.json (the ledger),
+  // data/sources.json, and data/current.json (the live headline layer) at load.
+  const DATA = { lastUpdated: "2026-06-30" };
+</script>
+<script src="config.js"></script>
+<script src="../app.js"></script>
+</body>
+</html>
