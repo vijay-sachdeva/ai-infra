@@ -267,6 +267,462 @@
     "confidence": "high",
     "source_url": "https://www.datacenterdynamics.com/en/news/ntt-gains-council-approval-for-482mw-data-center-campus-in-nierstein-germany/"
    }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.4361,
+     53.3079
+    ]
+   },
+   "properties": {
+    "id": "microsoft-grange-castle-dublin",
+    "name": "Microsoft Grange Castle Campus (Dublin)",
+    "operator": "Microsoft",
+    "state": "IE",
+    "country_name": "Ireland",
+    "record_type": "campus",
+    "capacity_mw": null,
+    "capacity_type": "unspecified",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "medium",
+    "source_url": "https://www.datacenterdynamics.com/en/news/microsoft-planning-170mw-gas-power-plant-at-dublin-campus/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.14,
+     52.795
+    ]
+   },
+   "properties": {
+    "id": "echelon-dub20-arklow-wicklow",
+    "name": "Echelon DUB20 Campus (Arklow, Co. Wicklow)",
+    "operator": "Echelon Data Centres",
+    "state": "IE",
+    "country_name": "Ireland",
+    "record_type": "campus",
+    "capacity_mw": 200,
+    "capacity_type": "it_critical_load",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "medium",
+    "source_url": "https://www.datacenterdynamics.com/en/news/irelands-echelon-breaks-ground-at-200mw-county-wicklow-data-center-campus-outside-dublin/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.494,
+     53.365
+    ]
+   },
+   "properties": {
+    "id": "aionx-kildare-innovation-campus-leixlip",
+    "name": "AiOnX Kildare Innovation Campus (Leixlip)",
+    "operator": "AiOnX (SWI Group); tenant reported as Amazon/AWS",
+    "state": "IE",
+    "country_name": "Ireland",
+    "record_type": "campus",
+    "capacity_mw": 179,
+    "capacity_type": "total_power",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "medium",
+    "source_url": "https://www.datacenterdynamics.com/en/news/aionx-secures-hyperscale-tenant-for-irish-data-center-campus-outside-dublin/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.371,
+     53.406
+    ]
+   },
+   "properties": {
+    "id": "aws-cruiserath-mulhuddart-north-dublin",
+    "name": "AWS North Dublin Campus (Cruiserath, Mulhuddart)",
+    "operator": "Amazon Web Services (developer: Universal Developers LLC)",
+    "state": "IE",
+    "country_name": "Ireland",
+    "record_type": "campus",
+    "capacity_mw": 73,
+    "capacity_type": "total_power",
+    "status": "planned",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.irishtimes.com/business/2025/12/26/amazon-secures-permission-to-build-three-data-centres-in-north-dublin/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.4361,
+     53.3079
+    ]
+   },
+   "properties": {
+    "id": "google-grange-castle-dublin-proposed",
+    "name": "Google Grange Castle Data Centre (Dublin, proposed)",
+    "operator": "Google (Google Ireland Ltd)",
+    "state": "IE",
+    "country_name": "Ireland",
+    "record_type": "campus",
+    "capacity_mw": null,
+    "capacity_type": "unspecified",
+    "status": "planned",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.pleanala.ie/en-ie/case/320852"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0553,
+     51.6461
+    ]
+   },
+   "properties": {
+    "id": "nscale-loughton-uk",
+    "name": "Nscale Loughton AI Campus (Loughton, Essex)",
+    "operator": "Nscale",
+    "state": "GB",
+    "country_name": "United Kingdom",
+    "record_type": "campus",
+    "capacity_mw": 50,
+    "capacity_type": "it_critical_load",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.nscale.com/press-releases/ai-hyperscaler-nscale-to-invest-gbp-2-billion-in-the-uk-data-centre-industry"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.937,
+     66.8095
+    ]
+   },
+   "properties": {
+    "id": "nscale-glomfjord-norway",
+    "name": "Nscale Glomfjord AI Data Centre (Meloy)",
+    "operator": "Nscale",
+    "state": "NO",
+    "country_name": "Norway",
+    "record_type": "campus",
+    "capacity_mw": 30,
+    "capacity_type": "unspecified",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.datacenterdynamics.com/en/news/nscale-to-expand-glomfjord-data-center-in-norway-with-30mw-building/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.4272,
+     68.4384
+    ]
+   },
+   "properties": {
+    "id": "nscale-stargate-norway-kvandal",
+    "name": "Stargate Norway (Kvandal, near Narvik)",
+    "operator": "Nscale, Aker ASA, OpenAI",
+    "state": "NO",
+    "country_name": "Norway",
+    "record_type": "campus",
+    "capacity_mw": 230,
+    "capacity_type": "total_power",
+    "status": "announced",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.nscale.com/press-releases/stargate-norway-nscale-aker-openai"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1922,
+     51.1416
+    ]
+   },
+   "properties": {
+    "id": "coreweave-crawley-uk",
+    "name": "CoreWeave Crawley (Digital Realty LGW15/LGW16)",
+    "operator": "CoreWeave (colocated at Digital Realty)",
+    "state": "GB",
+    "country_name": "United Kingdom",
+    "record_type": "campus",
+    "capacity_mw": 24,
+    "capacity_type": "unspecified",
+    "status": "operational",
+    "power_model": "Colocated",
+    "confidence": "medium",
+    "source_url": "https://www.coreweave.com/news/coreweave-announces-two-initial-data-centers-in-the-uk-are-now-operational"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     3.343,
+     50.335
+    ]
+   },
+   "properties": {
+    "id": "data4-escaudain-fr",
+    "name": "Data4 Escaudain Campus (Northern France)",
+    "operator": "Data4 (Brookfield)",
+    "state": "FR",
+    "country_name": "France",
+    "record_type": "campus",
+    "capacity_mw": 700,
+    "capacity_type": "total_power",
+    "status": "announced",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.data4group.com/en/news-data4/in-northern-france-data4-launches-its-largest-data-center-campus-to-support-europes-ai-growth/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.253,
+     48.657
+    ]
+   },
+   "properties": {
+    "id": "data4-par03-nozay-fr",
+    "name": "Data4 PAR03 Campus (Nozay, Greater Paris)",
+    "operator": "Data4 (Brookfield)",
+    "state": "FR",
+    "country_name": "France",
+    "record_type": "campus",
+    "capacity_mw": 250,
+    "capacity_type": "total_power",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "medium",
+    "source_url": "https://www.solutions-numeriques.com/par03-le-nouveau-campus-numerique-de-data4-dedie-a-lia/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.418,
+     51.404
+    ]
+   },
+   "properties": {
+    "id": "vantage-cardiff-st-athan-gb",
+    "name": "Vantage Cardiff / St. Athan Campus (Wales)",
+    "operator": "Vantage Data Centers",
+    "state": "GB",
+    "country_name": "United Kingdom",
+    "record_type": "campus",
+    "capacity_mw": 120,
+    "capacity_type": "it_critical_load",
+    "status": "planned",
+    "power_model": "Grid",
+    "confidence": "medium",
+    "source_url": "https://www.datacenterdynamics.com/en/news/vantage-plots-data-center-campus-outside-cardiff-wales/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.324,
+     45.358
+    ]
+   },
+   "properties": {
+    "id": "vantage-milan-it",
+    "name": "Vantage Milan Campuses MXP1 + MXP2 (Italy)",
+    "operator": "Vantage Data Centers",
+    "state": "IT",
+    "country_name": "Italy",
+    "record_type": "campus",
+    "capacity_mw": 96,
+    "capacity_type": "it_critical_load",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.datacenterdynamics.com/en/news/vantage-plots-second-italian-data-center-campus-in-milan/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.56,
+     50.093
+    ]
+   },
+   "properties": {
+    "id": "cyrusone-fra7-frankfurt-de",
+    "name": "CyrusOne FRA7 Frankfurt Westside Campus (Germany)",
+    "operator": "CyrusOne",
+    "state": "DE",
+    "country_name": "Germany",
+    "record_type": "campus",
+    "capacity_mw": 81,
+    "capacity_type": "it_critical_load",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.cyrusone.com/data-centers/emea/frankfurt-germany-fra7"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.068,
+     60.795
+    ]
+   },
+   "properties": {
+    "id": "green-mountain-osl2-hamar-no",
+    "name": "Green Mountain OSL2-Hamar (TikTok), Norway",
+    "operator": "Green Mountain (anchor tenant: TikTok)",
+    "state": "NO",
+    "country_name": "Norway",
+    "record_type": "campus",
+    "capacity_mw": 150,
+    "capacity_type": "total_power",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://greenmountain.no/data-center-tiktok/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.437,
+     60.484
+    ]
+   },
+   "properties": {
+    "id": "ecodatacenter-borlange-se",
+    "name": "EcoDataCenter Borlange Mega Campus, Sweden",
+    "operator": "EcoDataCenter",
+    "state": "SE",
+    "country_name": "Sweden",
+    "record_type": "campus",
+    "capacity_mw": 240,
+    "capacity_type": "total_power",
+    "status": "planned",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://ecodatacenter.tech/press/ecodatacenter-announces-new-mega-campus-3341245"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.926,
+     59.622
+    ]
+   },
+   "properties": {
+    "id": "evroc-arlandastad-stockholm-se",
+    "name": "evroc Flagship (Arlandastad, Stockholm), Sweden",
+    "operator": "evroc",
+    "state": "SE",
+    "country_name": "Sweden",
+    "record_type": "campus",
+    "capacity_mw": 18,
+    "capacity_type": "unspecified",
+    "status": "planned",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://evroc.com/news/evroc-flagship-datacenter-2025/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -22.606,
+     63.985
+    ]
+   },
+   "properties": {
+    "id": "atnorth-ice02-keflavik-is",
+    "name": "atNorth ICE02 Keflavik Mega Site, Iceland",
+    "operator": "atNorth",
+    "state": "IS",
+    "country_name": "Iceland",
+    "record_type": "campus",
+    "capacity_mw": 83,
+    "capacity_type": "total_power",
+    "status": "operational",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.atnorth.com/nordic-data-centers/iceland-data-centers/keflavik-mega-site/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.01,
+     52.23
+    ]
+   },
+   "properties": {
+    "id": "microsoft-poland-central-region-warsaw-pl",
+    "name": "Microsoft Poland Central datacenter region (Warsaw)",
+    "operator": "Microsoft",
+    "state": "PL",
+    "country_name": "Poland",
+    "record_type": "campus",
+    "capacity_mw": null,
+    "capacity_type": "unspecified",
+    "status": "operational",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://news.microsoft.com/europe/2023/04/26/microsoft-launches-its-first-datacenter-region-in-poland-bringing-new-opportunities-to-develop-the-digital-economy/"
+   }
   }
  ]
 }
