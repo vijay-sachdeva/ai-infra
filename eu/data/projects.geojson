@@ -1,0 +1,272 @@
+{
+ "type": "FeatureCollection",
+ "name": "Europe AI data-center projects",
+ "license": "CC-BY-4.0",
+ "attribution": "AI Infrastructure Monitor — Europe — data CC BY 4.0, https://vijay-sachdeva.github.io/ai-infra/eu",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.8891,
+     41.6488
+    ]
+   },
+   "properties": {
+    "id": "aws-aragon-spain-region",
+    "name": "AWS Europe (Spain) Region (Aragon: Zaragoza / Huesca / Teruel)",
+    "operator": "Amazon Web Services (AWS)",
+    "state": "ES",
+    "country_name": "Spain",
+    "record_type": "capex_program",
+    "capacity_mw": null,
+    "capacity_type": "unspecified",
+    "status": "operational",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.aboutamazon.eu/news/job-creation-and-investment/aws-plans-to-invest-15-7-billion-in-spain-supporting-the-creation-of-17-500-jobs-annually-in-local-businesses"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     3.8167,
+     50.4667
+    ]
+   },
+   "properties": {
+    "id": "google-st-ghislain-belgium",
+    "name": "Google St-Ghislain data center campus (Wallonia, Belgium)",
+    "operator": "Google",
+    "state": "BE",
+    "country_name": "Belgium",
+    "record_type": "capex_program",
+    "capacity_mw": null,
+    "capacity_type": "unspecified",
+    "status": "operational",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.googlecloudpresscorner.com/2025-10-07-Google-Announces-New-EUR5-Billion-AI-Infrastructure-Investment-in-Belgium-through-2027"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.8333,
+     53.4386
+    ]
+   },
+   "properties": {
+    "id": "google-eemshaven-netherlands",
+    "name": "Google Eemshaven / Groningen data center campus (Netherlands)",
+    "operator": "Google",
+    "state": "NL",
+    "country_name": "Netherlands",
+    "record_type": "capex_program",
+    "capacity_mw": null,
+    "capacity_type": "unspecified",
+    "status": "operational",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://datacenters.google/locations/eemshaven-netherlands-var/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0327,
+     51.6859
+    ]
+   },
+   "properties": {
+    "id": "google-waltham-cross-uk",
+    "name": "Google Waltham Cross data center (Hertfordshire, UK)",
+    "operator": "Google",
+    "state": "GB",
+    "country_name": "United Kingdom",
+    "record_type": "capex_program",
+    "capacity_mw": null,
+    "capacity_type": "unspecified",
+    "status": "operational",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://blog.google/around-the-globe/google-europe/united-kingdom/google-1-billion-investment-in-a-new-uk-data-centre/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.1972,
+     60.5697
+    ]
+   },
+   "properties": {
+    "id": "google-hamina-finland",
+    "name": "Google Hamina (Summa) data center campus (Finland)",
+    "operator": "Google",
+    "state": "FI",
+    "country_name": "Finland",
+    "record_type": "capex_program",
+    "capacity_mw": null,
+    "capacity_type": "unspecified",
+    "status": "announced",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.businessfinland.com/news/2024/google-to-expand-its-data-center-in-finland/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.83,
+     39.96
+    ]
+   },
+   "properties": {
+    "id": "meta-talavera-de-la-reina-spain",
+    "name": "Meta Talavera de la Reina Data Center (Torrehierro, Castilla-La Mancha)",
+    "operator": "Meta Platforms",
+    "state": "ES",
+    "country_name": "Spain",
+    "record_type": "capex_program",
+    "capacity_mw": null,
+    "capacity_type": "unspecified",
+    "status": "planned",
+    "power_model": "Grid",
+    "confidence": "medium",
+    "source_url": "https://www.datacenterdynamics.com/en/news/meta-plans-1bn-data-center-in-toledo-spain/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.46,
+     55.38
+    ]
+   },
+   "properties": {
+    "id": "meta-odense-denmark",
+    "name": "Meta Odense Data Center (Tietgenbyen, Odense)",
+    "operator": "Meta Platforms",
+    "state": "DK",
+    "country_name": "Denmark",
+    "record_type": "campus",
+    "capacity_mw": 294,
+    "capacity_type": "total_power",
+    "status": "operational",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://datacenters.atmeta.com/2020/10/we-are-expanding-facebooks-odense-data-center/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.17,
+     48.62
+    ]
+   },
+   "properties": {
+    "id": "mistral-eclairion-bruyeres-le-chatel-44mw",
+    "name": "Mistral AI flagship data center, Bruyeres-le-Chatel (operated by Eclairion)",
+    "operator": "Mistral AI (data center operated by Eclairion)",
+    "state": "FR",
+    "country_name": "France",
+    "record_type": "campus",
+    "capacity_mw": 44,
+    "capacity_type": "total_power",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.datacenterdynamics.com/en/news/mistral-ai-raises-830m-in-debt-financing-for-data-center-in-paris-france/"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.87,
+     37.95
+    ]
+   },
+   "properties": {
+    "id": "start-campus-sines-portugal",
+    "name": "Start Campus SINES Data Campus / SIN01 (Sines, Portugal)",
+    "operator": "Start Campus (backed by Davidson Kempner, Pioneer Point Partners)",
+    "state": "PT",
+    "country_name": "Portugal",
+    "record_type": "campus",
+    "capacity_mw": 1200,
+    "capacity_type": "total_power",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.startcampus.pt/start-campus-inaugurates-sin01-data-center"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     25.32,
+     60.63
+    ]
+   },
+   "properties": {
+    "id": "nebius-mantsala-finland",
+    "name": "Nebius Mantsala Data Center (Mantsala, Finland)",
+    "operator": "Nebius (formerly Yandex N.V.)",
+    "state": "FI",
+    "country_name": "Finland",
+    "record_type": "campus",
+    "capacity_mw": 75,
+    "capacity_type": "total_power",
+    "status": "construction",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://nebius.com/newsroom/nebius-to-triple-capacity-at-finland-data-center-to-75-mw"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.34,
+     49.87
+    ]
+   },
+   "properties": {
+    "id": "ntt-fra6-nierstein-germany",
+    "name": "NTT FRA6 Data Center Campus (Nierstein / Rhein-Selz, Germany)",
+    "operator": "NTT Global Data Centers (NTT GDC)",
+    "state": "DE",
+    "country_name": "Germany",
+    "record_type": "campus",
+    "capacity_mw": 482,
+    "capacity_type": "total_power",
+    "status": "planned",
+    "power_model": "Grid",
+    "confidence": "high",
+    "source_url": "https://www.datacenterdynamics.com/en/news/ntt-gains-council-approval-for-482mw-data-center-campus-in-nierstein-germany/"
+   }
+  }
+ ]
+}

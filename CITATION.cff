@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "AI Infrastructure Monitor — Europe"
+message: "If you use this data or dashboard, please cite it as below."
+type: dataset
+authors:
+  - family-names: Sachdeva
+    given-names: Vijay
+url: "https://vijay-sachdeva.github.io/ai-infra/eu"
+repository-code: "https://github.com/vijay-sachdeva/ai-infra"
+abstract: >-
+  An open, source-linked ledger of Europe's largest AI / hyperscaler data-center
+  campuses and investment programs — each record adversarially verified against
+  primary sources. A lean pilot on the shared AI Infrastructure Monitor engine
+  (US reference implementation); coverage grows as verified European data matures.
+  Code is MIT-licensed; the curated dataset is CC BY 4.0 (third-party sources
+  cited per record retain their own terms).
+license: CC-BY-4.0
+version: "0.1.0"
+date-released: "2026-06-30"
+keywords:
+  - data centers
+  - artificial intelligence
+  - energy
+  - electric grid
+  - Europe
+  - open data

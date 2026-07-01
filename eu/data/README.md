@@ -17,8 +17,12 @@ Per-record fields: `id`, `name`, `operator`, `state` (ISO2 country code, or `EU`
 `record_type` (`campus` | `capex_program` | `policy_program`), and `sources[]` (each with a
 verified `url`, `publisher`, `published`, `retrieved`, `supports_claim`).
 
-**Verification.** Every record was adversarially re-verified on 2026-06-30 by re-fetching its
-sources (12 confirmed, 6 corrected, 0 rejected) — see the `verification` block.
+**Verification.** Every record was adversarially re-verified by re-fetching its sources — see the
+`verification` block in `projects.json`.
+
+**Derived exports.** `projects.csv` (flat table) and `projects.geojson` (mapped points, records
+with coordinates) are generated from `projects.json` by `scripts/eu/build_projects_exports.py` —
+regenerate after any ledger edit. `projects.json` is the canonical source.
 
 **Read the caveats.** The dataset carries a `caveats` array and a `known_gaps` array. In short:
 - **Do not sum `capacity_mw`.** Only ~7 of 18 records disclose MW, and they mix ultimate campus
